@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+}
+
+body {
+  background-image: url(".././images/bg-pattern-desktop.svg");
+  color: #ce9797;
+  color: hsl(0, 36%, 70%);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+}
+
+/*containers*/
+.navbar {
+  display: inline-flex !important;
+  padding: 3% 8% 0 8%;
+}
+
+footer,
+.text-container {
+  padding: 3% 8%;
+}
+
+.image-container {
+  float: right;
+  width: 40%;
+}
+
+.sign-up {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+
+footer {
+  clear: both;
+  font-size: 11px;
+  text-align: center;
+}
+
+/*headings*/
+.big-heading {
+  font-size: 4em;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+span,
+footer {
+  color: #000;
+}
+
+/*text*/
+.error-msg {
+  color: #f96262;
+  color: hsl(0, 93%, 68%);
+}
+
+.success-msg {
+  color: #5c7f43;
+  color: hsl(95, 31%, 38%);
+}
+
+.attribution a {
+  color: #3e52a3;
+  color: hsl(228, 45%, 44%);
+}
+
+/*input field*/
+input {
+  border-radius: 30px;
+  border: 1px solid #ce9797;
+  border: 1px solid hsl(0, 36%, 70%);
+  height: 50px;
+  padding-left: 10px;
+  width: 80%;
+}
+
+input::placeholder {
+  color: #ce9797;
+  color: hsl(0, 36%, 70%);
+}
+
+/*submit button*/
+#submitBtn {
+  background-image: linear-gradient(to right, #f8bfbf, #ee8c8c);
+  background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: 30px;
+  border: 1px solid #ce9797;
+  border: 1px solid hsl(0, 36%, 70%);
+  height: 54px;
+  margin-left: -10%;
+  text-align: center;
+  width: 100px;
+}
+
+#submitBtn:hover {
+  box-shadow: 5px 5px 8px #ce9797;
+  box-shadow: 5px 5px 8px hsl(0, 36%, 70%);
+}
+
+.error-input {
+  background-image: url(".././images/icon-error.svg");
+  background-position: 80%;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  border: #f96262 1px solid;
+  border: hsl(0, 93%, 68%) 1px solid;
+}
+
+/*laptop*/
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    padding: 3% 6% 0 6%;
+  }
+
+  footer,
+  .text-container {
+    padding: 3% 6%;
+  }
+
+  .big-heading {
+    font-size: 2.5em;
+    letter-spacing: 8px;
+  }
+}
+
+/*tablet and ipad*/
+ @media only screen and (max-width: 767px) {
+
+  .navbar {
+    display: block;
+  }
+  
+  .image-container {
+    float: none;
+    padding: 3% 0;
+    width: 100%;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+  }
+
+ }

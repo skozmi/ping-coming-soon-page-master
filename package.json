@@ -1,0 +1,26 @@
+{
+  "name": "ping-coming-soon-page-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Ping coming soon page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Miloš Mirković",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skozmi/ping-coming-soon-page-master.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skozmi/ping-coming-soon-page-master/issues"
+  },
+  "homepage": "https://github.com/skozmi/ping-coming-soon-page-master#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  }
+}

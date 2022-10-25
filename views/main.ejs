@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><img class="logo-image"src="public/images/logo.svg" alt="logo"></a>
+    </nav>
+    <div class="image-container">
+        <picture class="title-image">
+            <source media="(max-width:767px)" srcset="public/images/hero-mobile.jpg">
+            <img src="public/images/hero-desktop.jpg" alt="girl-desktop" style="width:100%;">
+        </picture>
+    </div>
+    <div class="text-container">
+        <h1 class="big-heading">We're<br><span>coming<br>soon</span></h1>
+        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
+            up-to-date with announcements and our launch deals.</p>
+        <form action="/" method="post">
+            <div class="sign-up">
+                <input type="email" class="<%= errorIcon %>" id="email" name="email" placeholder="Email Address">
+                <button id="submitBtn"><img class="icon-arrow" src="public/images/icon-arrow.svg"
+                        alt="icon-arrow"></button><br>
+            </div>
+        </form>
+        <p class="error-msg"><%= errorMsg %></p>
+        <p class="success-msg"><%= successMsg %></p>
+    </div>
+
+<%- include('partials/footer'); -%>
