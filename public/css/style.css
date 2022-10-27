@@ -12,11 +12,11 @@ picture {
 }
 
 body {
+  color: #969696;
+  color: hsl(0, 0%, 59%);
   font-family: 'Libre Franklin', sans-serif;
   font-size: 20px;
   text-align: center;
-  color: #969696;
-  color: hsl(0, 0%, 59%);
 }
 
 /*containers*/
@@ -34,9 +34,9 @@ footer {
 
 /*nav and header*/
 span {
-  font-weight: 700;
   color: #151f29;
   color: hsl(209, 33%, 12%);
+  font-weight: 700;
 }
 
 .main-paragraph {
@@ -50,9 +50,9 @@ form {
 }
 
 input {
-  border-radius: 1.875rem;
   border: 0.1rem solid #969696;
   border: 0.1rem solid hsl(0, 0%, 59%);
+  border-radius: 1.875rem;
   height: 3.125rem;
   padding-left: 0.625rem;
   width: 60%;
@@ -64,12 +64,12 @@ input::placeholder {
 }
 
 .submit-btn {
-  border-radius: 30px;
-  color:#fff;
   background: #4f7df3;
   background: hsl(223, 87%, 63%);
   border: none;
-  height: 54px;
+  border-radius: 30px;
+  color:#fff;
+  height: 3.375rem;
   text-align: center;
   width: 20%;
 }
@@ -95,9 +95,9 @@ input::placeholder {
 }
 
 .error-msg {
-  font-size: 0.8rem;
   color: #ff5263;
   color: hsl(354, 100%, 66%);
+  font-size: 0.8rem;
 }
 
 .error-input {
@@ -120,8 +120,8 @@ input::placeholder {
 
   input,
   .submit-btn {
-    width: 80%;
     margin: 2%;
+    width: 80%;
   }
  }
 
