@@ -2,6 +2,7 @@ const express = require("express");
 const ejs = require('ejs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const alert = require('alert'); 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,31 +15,33 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.get('/', (req, res, next)=>{
-    res.sendFile(__dirname + '/public/index.html');
-});
+let message = {
+    text: '',
+    class: ''
+};
 
-/*
 app.get('/', (req, res, next)=>{
-    res.render('main');
+    res.render('main', {errorMsg: message.text, errorClass: message.class});
 });
-
 
 app.post('/', (req, res, next)=>{
-    message = {
-        error: {text:'', class:''},
-        success: {text: ''}
-    };
+    message.text = '';
+    message.class= '';
     let emailInput = req.body.email;
-    if(!emailInput || emailInput.match(/@/) == null || emailInput.match(/.com/) == null){
-        message.error.text = 'Please provide a valid email';
-        message.error.class = 'error-input'
+    console.log(emailInput);
+    if(!emailInput){
+        message.text = 'Whoops! It looks like you forgot to add your email.';
+        message.class= 'error-input';
+    } else {
+        if (emailInput.match(/@gmail./)== null && emailInput.match(/@hotmail./)== null && emailInput.match(/@yahoo./)== null){
+            message.text = 'Please provide a valid email address';
+            message.class= 'error-input';
+        } else {
+                alert('Your email is sent! Thank you!');
+        }
     }
-    else {
-        message.success.text = 'Thank you for login in';
-    }
-    res.render('main', {errorMsg: message.error.text, errorIcon: message.error.class, successMsg: message.success.text});
-}); */
+    res.render('main', {errorMsg: message.text, errorClass: message.class});
+}); 
 
 app.listen(PORT, ()=> {
     console.log(`Server is running on port ${PORT}.`);

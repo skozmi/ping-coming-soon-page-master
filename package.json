@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/skozmi/ping-coming-soon-page-master#readme",
   "dependencies": {
+    "alert": "^5.1.1",
     "body-parser": "^1.20.1",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
