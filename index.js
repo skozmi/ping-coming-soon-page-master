@@ -28,7 +28,6 @@ app.post('/', (req, res, next)=>{
     message.text = '';
     message.class= '';
     let emailInput = req.body.email;
-    console.log(emailInput);
     if(!emailInput){
         message.text = 'Whoops! It looks like you forgot to add your email.';
         message.class= 'error-input';
